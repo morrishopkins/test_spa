@@ -13,7 +13,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 const styles = {
   container: {
     textAlign: 'center',
-    paddingTop: 200,
+    paddingTop: 60,
   },
 };
 

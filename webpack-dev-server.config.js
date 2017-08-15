@@ -8,12 +8,12 @@ const config = {
     main: [
       // only- means to only hot reload for successful updates
       'webpack/hot/only-dev-server',
-      './src/app/app.js',
+      './src/app.js',
     ],
   },
   // Server Configuration options
   devServer: {
-    contentBase: 'src/www', // Relative directory for base of server
+    contentBase: 'src/static', // Relative directory for base of server
     hot: true, // Live-reload
     inline: true,
     port: 3000, // Port Number
@@ -29,7 +29,7 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
     // Moves files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      {from: 'static'},
     ], path.resolve(__dirname, 'src')),
   ],
   module: {

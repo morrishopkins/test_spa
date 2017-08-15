@@ -5,7 +5,7 @@ const TransferWebpackPlugin = require('transfer-webpack-plugin');
 const config = {
   entry: {
     main: [
-      './src/app/app.js',
+      './src/app.js',
     ],
   },
   // Render source-map file for final build
@@ -28,7 +28,7 @@ const config = {
     }),
     // Transfer Files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      {from: 'static'},
     ], path.resolve(__dirname, 'src')),
   ],
   module: {
